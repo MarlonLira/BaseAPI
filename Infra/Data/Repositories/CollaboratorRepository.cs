@@ -11,7 +11,7 @@ namespace Infra.Data.Repositories
 {
     public class CollaboratorRepository : Repository<Collaborator>, ICollaboratorRepository
     {
-        public CollaboratorRepository(GymTimeContext context) : base(context) { }
+        public CollaboratorRepository(BaseAPIContext context) : base(context) { }
 
         public async Task<int> Delete(Collaborator entity)
         {
