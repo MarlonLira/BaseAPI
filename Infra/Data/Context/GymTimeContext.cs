@@ -5,9 +5,9 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Infra.Data.Context
 {
-    public class GymTimeContext : DbContext
+    public class BaseApiContext : DbContext
     {
-        public GymTimeContext() : base("name=Default")
+        public BaseApiContext() : base("name=Default")
         {
             this.Configuration.LazyLoadingEnabled = false;
             this.Configuration.ProxyCreationEnabled = false;
