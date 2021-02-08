@@ -13,7 +13,7 @@ namespace Infra.Data.Repositories
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        public UserRepository(GymTimeContext context) : base(context) { }
+        public UserRepository(BaseAPIContext context) : base(context) { }
 
         public async Task<int> Delete(User entity)
         {

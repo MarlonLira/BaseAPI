@@ -10,7 +10,7 @@ namespace Infra.Data.Repositories
 {
     public class UserAffiliationRepository : Repository<UserAffiliation>, IUserAffiliationRepository
     {
-        public UserAffiliationRepository(GymTimeContext context) : base(context) { }
+        public UserAffiliationRepository(BaseAPIContext context) : base(context) { }
 
         public async Task<int> Delete(UserAffiliation entity)
         {

@@ -11,7 +11,7 @@ namespace Infra.Data.Repositories
 {
     public class EmployeeRepository : Repository<Employee>, IEmployeeRepository
     {
-        public EmployeeRepository(GymTimeContext context) : base(context) { }
+        public EmployeeRepository(BaseAPIContext context) : base(context) { }
 
         public async Task<int> Delete(Employee entity)
         {

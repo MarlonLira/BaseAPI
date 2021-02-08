@@ -10,7 +10,7 @@ namespace Infra.Data.Repositories
 {
     public class ClientRepository : Repository<Client>, IClientRepository
     {
-        public ClientRepository(GymTimeContext context) : base(context) { }
+        public ClientRepository(BaseAPIContext context) : base(context) { }
 
         public async Task<int> Delete(Client entity)
         {
