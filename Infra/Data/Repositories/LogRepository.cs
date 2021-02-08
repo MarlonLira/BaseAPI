@@ -10,7 +10,7 @@ namespace Infra.Data.Repositories
 {
     public class LogRepository : Repository<Log>, ILogRepository
     {
-        public LogRepository(GymTimeContext context) : base(context) { }
+        public LogRepository(BaseAPIContext context) : base(context) { }
 
         public async Task<int> Delete(Log entity)
         {
