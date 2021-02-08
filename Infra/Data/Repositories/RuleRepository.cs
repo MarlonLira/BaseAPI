@@ -10,7 +10,7 @@ namespace Infra.Data.Repositories
 {
     public class RuleRepository : Repository<Rule>, IRuleRepository
     {
-        public RuleRepository(GymTimeContext context) : base(context) { }
+        public RuleRepository(BaseAPIContext context) : base(context) { }
 
         public async Task<int> Delete(Rule entity)
         {
