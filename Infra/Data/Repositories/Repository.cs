@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+using Domain.Entities;
 using Infra.Data.Context;
 using System;
 using System.Data.Entity;
@@ -7,12 +7,12 @@ namespace Infra.Data.Repositories
 {
     public class Repository<TEntity> where TEntity : Entity
     {
-        protected GymTimeContext Db;
+        protected BaseAPIContext Db;
         protected DbSet<TEntity> DbSet { get; set; }
 
-        public Repository(GymTimeContext gymTimeContext)
+        public Repository(BaseAPIContext baseAPIContext)
         {
-            this.Db = gymTimeContext;
+            this.Db = baseAPIContext;
             this.DbSet = Db.Set<TEntity>();
         }
 
