@@ -10,7 +10,7 @@ namespace Infra.Data.Repositories
 {
     public class PartnerRepository : Repository<Partner>, IPartnerRepository
     {
-        public PartnerRepository(GymTimeContext context) : base(context) { }
+        public PartnerRepository(BaseAPIContext context) : base(context) { }
 
         public async Task<int> Delete(Partner entity)
         {
